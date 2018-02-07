@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { DashComponent } from './dash/dash';
 import { ArtistsComponent } from './artist/artist';
 import { ArtistDetailComponent } from './artist/art_detail';
+import { CatalogueComponent } from './catalogue/catalogue';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashComponent,
     ArtistsComponent,
-    ArtistDetailComponent
+    ArtistDetailComponent,
+    CatalogueComponent
   ],
   imports: [
     BrowserModule,
