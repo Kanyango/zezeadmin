@@ -1,0 +1,42 @@
+<br>
+<br>
+<br>
+<div class="ui grid">
+  <div class="row">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
+      <div class="ui fluid card">
+        <div class="content">
+          <div class="header">
+            All Artists
+          </div>
+        </div>
+        <div class="content">
+          <div class="ui large selection list">
+            <div class="item" *ngFor="let one of all_artists">
+
+              <div class="content">
+                <div class="ui left floated header">
+                    <img class="ui avatar image" src="{{ one.photo  }}">
+                  {{ one.name }}
+                </div>
+
+                  <a class="ui big red tag label" *ngIf="one.status == 'Pending'">Pending approval</a>
+                  <a class="ui big green tag label" *ngIf="one.status != 'Pending'">Approved</a>
+
+                <div class="ui right floated content">
+                  <a type="button" class="ui big teal icon button"
+                   [routerLink]="['/artist_detail']">
+                    <i class="right arrow icon"></i>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

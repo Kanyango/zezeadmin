@@ -1,18 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { RouterModule }   from '@angular/router';
+import {SuiModule} from 'ng2-semantic-ui';
+import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
-
+import { DashComponent } from './dash/dash';
+import { ArtistsComponent } from './artist/artist';
+import { ArtistDetailComponent } from './artist/art_detail';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashComponent,
+    ArtistsComponent,
+    ArtistDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    SuiModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
